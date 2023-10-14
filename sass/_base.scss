@@ -3,7 +3,7 @@ COLORS
 
 #96f20d
 #0dcaf1
-#d925a3
+#da26a4
 #655065
 #fbae0e
 
@@ -23,9 +23,12 @@ Grey dark 3: #999
 */
 
 :root {
-    --color-primary: #109cc4;
-    --color-primary-light: #70c4db;
-    --color-primary-dark: #0d7d9d;
+    --color-primary: #0dcaf1;
+    --color-primary-light: #56daf5;
+    --color-primary-dark: #098da9;
+    --color-secondary: #da26a4;
+    --color-secondary-light: #e567bf;
+    --color-secondary-dark: #991b73;
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
@@ -76,7 +79,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-grey-dark-2);
