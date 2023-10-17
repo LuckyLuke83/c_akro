@@ -1,15 +1,16 @@
 .nav {
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    
 
     &__logo {
         height: 7rem;
     }
 
     &__container {
-        position: absolute;
+        position: fixed;
         top:0;
         left:0;
         background-color: rgba(255, 255, 255, 0.6);

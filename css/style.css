@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0 - 600px:      Phone
 600 - 700px     Tablet portrait small
@@ -20,11 +21,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 /*
 COLORS
 
-#96f20d
-#0dcaf1
-#da26a4
-#644fb0
-#fbae0e
+#96f20f - zielony
+#0dcaf1 - błękitny
+#d928a4 - różowy 
+#644fb5 - fiolet
+#ED7405 - napis
 
 Primary: #109cc4
 Primary light: #50c1c1
@@ -39,14 +40,20 @@ Grey dark 1: #333
 Grey dark 2: #777
 Grey dark 3: #999
 
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
 */
 :root {
-  --color-primary: #0dcaf1;
+  --color-primary: #05BFED;
   --color-primary-light: #56daf5;
   --color-primary-dark: #098da9;
-  --color-secondary: #da26a4;
-  --color-secondary-light: #e567bf;
-  --color-secondary-dark: #991b73;
+  --color-secondary: #d928a4;
+  --color-secondary-light: #ec94d2;
+  --color-secondary-dark: #821862;
   --color-third: #644fb0;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -87,25 +94,42 @@ html {
 
 body {
   position: relative;
+  padding: 1rem 3rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-2);
-  background-color: var(--color-grey-light-1);
-  height: 200vh; }
+  background-color: var(--color-grey-light-2); }
+
+.section {
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-grey-light-1); }
+  .section__header {
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 35%;
+    text-align: center;
+    color: var(--color-grey-light-1);
+    background-color: var(--color-primary);
+    border-radius: 1rem; }
+  .section__text {
+    font-size: 1.8rem;
+    margin-bottom: 1rem; }
 
 .hidden {
   display: none; }
 
 .nav {
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 3rem; }
+  justify-content: space-between; }
   .nav__logo {
     height: 7rem; }
   .nav__container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.6);
