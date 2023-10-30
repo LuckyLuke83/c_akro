@@ -36,6 +36,9 @@ Grey dark 3: #999
     --color-secondary-light: #ec94d2;
     --color-secondary-dark: #821862;
     --color-third: #644fb0;
+    --color-fourth: #96f20f;
+    --color-fifth: #ED7405;
+    --color-white: #fff;
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
@@ -126,3 +129,6 @@ body {
     display: none;
 }
 
+.gap-medium {
+    gap: 4rem;
+}
