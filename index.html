@@ -72,23 +72,21 @@
             <div class="advance__level-item advance__level-5">indywidualne</div>
         </div>
         <div class="grafik__coach">
-            <div class="grafik__name artur">
+            <div class="grafik__name" data-tab="artur-grafik">
                 <p>Artur</p>
                 <i class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="grafik__timetable" id="artur">
+            <div class="grafik__timetable" id="artur-grafik">
                 <div class="grafik__class">
-                    <button class="grafik__class-akro active">
+                    <button class="grafik__class-akro active" data-tab="akrobatyka">
                         Akrobatyka
                     </button>
-                    <button class="grafik__class-akro">
+                    <button class="grafik__class-akro" data-tab="akroSmyk">
                         Akro Smyk
                     </button>
                 </div>
-                <div class="grafik__plan">
-                    <div class="grafik__plan-akrobatyka">
-                        
-                        <!--  -->
+                <div class="grafik__plan grafik__plan-active">
+                    <div class="grafik__plan-content grafik__plan-content-active grafik__plan-akrobatyka" id="akrobatyka">
 
                         <div class="grafik__plan-container">
                             
@@ -134,79 +132,82 @@
                                 </div>
                             
                         </div>
-                        <div class="grafik__plan-container">
-                            <div class="grafik__plan-day">
-                                <div class="grafik__plan-hour grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">H</div>
-                                    <div class="grafik__plan-flex-item">14</div>
-                                    <div class="grafik__plan-flex-item">15</div>
-                                    <div class="grafik__plan-flex-item">17:40</div>
+                        
+                            <div class="grafik__plan-container">
+                                <div class="grafik__plan-day">
+                                    <div class="grafik__plan-hour grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">H</div>
+                                        <div class="grafik__plan-flex-item">14</div>
+                                        <div class="grafik__plan-flex-item">15</div>
+                                        <div class="grafik__plan-flex-item">17:40</div>
+                                    </div>
+                                    <div class="grafik__plan-title grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">Piątek</div>
+                                        <div class="grafik__plan-flex-item advance__level-5"><span>Indywidualne</span></div>
+                                        <div class="grafik__plan-flex-item advance__level-5"><span>Indywidualne</span></div>
+                                        <div class="grafik__plan-flex-item advance__level-1">A18 <span>(4-6lat)</span></div>
+                                    </div>
                                 </div>
-                                <div class="grafik__plan-title grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">Piątek</div>
-                                    <div class="grafik__plan-flex-item advance__level-5"><span>Indywidualne</span></div>
-                                    <div class="grafik__plan-flex-item advance__level-5"><span>Indywidualne</span></div>
-                                    <div class="grafik__plan-flex-item advance__level-1">A18 <span>(4-6lat)</span></div>
+                                <div class="grafik__plan-day">
+                                    <div class="grafik__plan-hour grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">H</div>
+                                        <div class="grafik__plan-flex-item">11:40</div>
+                                        
+                                    </div>
+                                    <div class="grafik__plan-title grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">Sobota</div>
+                                        <div class="grafik__plan-flex-item advance__level-1">A19 <span>(4-6lat)</span></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grafik__plan-day">
-                                <div class="grafik__plan-hour grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">H</div>
-                                    <div class="grafik__plan-flex-item">11:40</div>
-                                    
-                                </div>
-                                <div class="grafik__plan-title grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">Sobota</div>
-                                    <div class="grafik__plan-flex-item advance__level-1">A19 <span>(4-6lat)</span></div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
-                    <div class="grafik__plan-akrosmyk">
-                        <div class="grafik__plan-header">
-                            <h3>Dzieci 2 - 3 lat</h3>
-                                <span>grupy do 10 osób</span>
-                        </div>
-                        <div class="grafik__plan-container gap-medium">
-                            <div class="grafik__plan-day">
-                                <div class="grafik__plan-hour grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">H</div>
-                                    <div class="grafik__plan-flex-item">16</div>
-                                    <div class="grafik__plan-flex-item">16:50</div>
+                    <div class="grafik__plan-content" id="akroSmyk">
+                        <div class="grafik__plan-akrosmyk">
+                            <div class="grafik__plan-header">
+                                <h3>Dzieci 2 - 3 lat</h3>
+                                    <span>grupy do 10 osób</span>
+                            </div>
+                            <div class="grafik__plan-container gap-medium">
+                                <div class="grafik__plan-day">
+                                    <div class="grafik__plan-hour grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">H</div>
+                                        <div class="grafik__plan-flex-item">16</div>
+                                        <div class="grafik__plan-flex-item">16:50</div>
+                                    </div>
+                                    <div class="grafik__plan-title grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">Piątek</div>
+                                        <div class="grafik__plan-flex-item advance__level-2">Pingwinki</div>
+                                        <div class="grafik__plan-flex-item advance__level-1">Tygryski</div>
+                                    </div>
                                 </div>
-                                <div class="grafik__plan-title grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">Piątek</div>
-                                    <div class="grafik__plan-flex-item advance__level-2">Pingwinki</div>
-                                    <div class="grafik__plan-flex-item advance__level-1">Tygryski</div>
+                                <div class="grafik__plan-day">
+                                    <div class="grafik__plan-hour grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">H</div>
+                                        <div class="grafik__plan-flex-item">10</div>
+                                        <div class="grafik__plan-flex-item">10:50</div>
+                                    </div>
+                                    <div class="grafik__plan-title grafik__plan-flex">
+                                        <div class="grafik__plan-flex-item">Sobota</div>
+                                        <div class="grafik__plan-flex-item advance__level-2">Małpki</div>
+                                        <div class="grafik__plan-flex-item advance__level-1">Lemurki</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grafik__plan-day">
-                                <div class="grafik__plan-hour grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">H</div>
-                                    <div class="grafik__plan-flex-item">10</div>
-                                    <div class="grafik__plan-flex-item">10:50</div>
-                                </div>
-                                <div class="grafik__plan-title grafik__plan-flex">
-                                    <div class="grafik__plan-flex-item">Sobota</div>
-                                    <div class="grafik__plan-flex-item advance__level-2">Małpki</div>
-                                    <div class="grafik__plan-flex-item advance__level-1">Lemurki</div>
-                                </div>
-                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-            <div class="grafik__name mateusz">
+            <div class="grafik__name" data-tab="mateusz">
                 <p>Mateusz</p>
                 <i class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="grafik__name natasza">
+            <div class="grafik__name" data-tab="natasza">
                 <p>Natasza</p>
                 <i class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="grafik__name magda">
+            <div class="grafik__name" data-tab="magda">
                 <p>Magda</p>
                 <i class="fa-solid fa-caret-down"></i>
             </div>

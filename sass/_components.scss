@@ -106,11 +106,12 @@
      }
 
     &__timetable {
+        display: none;
         width: 100%;
         
         z-index: 1;
         transform: translateY(-2rem);
-        
+                
         background-color: var(--color-white);
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
@@ -119,8 +120,8 @@
     &__class {
         display: flex;
         justify-content: space-evenly;
-
         margin: 4rem 0 3rem 0;
+
 
         &-akro {
             width: 40%;
@@ -130,11 +131,23 @@
             background-color: var(--color-grey-dark-2);
             padding: 1rem 0;
             border-radius: 1rem;
+            transition: all 0.3s;
+            filter: blur(0.8px);
         }
 
     }
 
     &__plan {
+        
+        &-content {
+            display: none;
+            padding: 2rem 0 3rem 0;
+
+            &-active {
+                display: block;
+            }
+        }
+        
 
         &-flex {
             display: flex;
@@ -223,9 +236,17 @@
     }
 }
 
+.active {
+    display: block;
+    
+    // background-color: var(--color-secondary);
+    
+}
+
 .grafik__class-akro.active{
     scale: 1.1;
     background-color: var(--color-secondary);
+    filter: blur(0px);
 }
 
 .grafik__coach-name.active{
