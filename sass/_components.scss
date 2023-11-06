@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
     
 
     &__logo {
@@ -74,21 +75,16 @@
 }
 
 
+.coach {
 
-.grafik {
-
-    &__coach {
+    &__container {
         display:flex;
         flex-direction: column;
-        // gap: 1rem;
-    
         width: 100%;
-        
-        // text-transform: uppercase;
         border-radius: 1rem;
     }
-   
-    &__name {
+
+    &__btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -97,33 +93,40 @@
         border-radius: 1rem;
         padding: 1rem 2rem;
         color: var(--color-grey-light-1);
-        background-color: var(--color-third); 
+        background-image: linear-gradient(to right bottom, var(--color-third),var(--color-third-dark));
         
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
-
-     }
+    }
 
     &__timetable {
         display: none;
+        // opacity: 0;
         width: 100%;
         
         z-index: 1;
         transform: translateY(-2rem);
+        // transform: translateY(-100%);
+        // transition: all 0.2s;
                 
         background-color: var(--color-white);
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-    }
 
-    &__class {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 4rem 0 3rem 0;
+        &-class {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 4rem 0 3rem 0;
+        }
 
+        &-active {
+            display: block;
+            transform: translateY(-2rem);
+            opacity: 1;
+        }
 
-        &-akro {
+        &-btn {
             width: 40%;
             border: none;
             text-transform: uppercase;
@@ -133,12 +136,28 @@
             border-radius: 1rem;
             transition: all 0.3s;
             filter: blur(0.8px);
-        }
 
+            &-active {
+                display: block; 
+                scale: 1.1;
+                background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
+                filter: blur(0px);
+            }
+            
+        }
     }
 
-    &__plan {
-        
+    &__schedule {
+
+        &-header {
+            padding: 1rem;
+            color: var(--color-grey-light-1);
+            text-align: center;
+            // background-color: var(--color-secondary);
+            background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
+            border-radius: 1rem;
+        }
+
         &-content {
             display: none;
             padding: 2rem 0 3rem 0;
@@ -147,53 +166,12 @@
                 display: block;
             }
         }
-        
-
-        &-flex {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-
-            &-item {
-                display: flex;
-                justify-content: center;
-
-                height: 3.4rem;
-                line-height: 3.4rem;
-                align-self: center;
-                font-size: 1.8rem;
-                letter-spacing: 1px;
-                color: var(--color-grey-dark-2);
-                
-            }
-        }
-
-        &-header {
-            padding: 1rem;
-            color: var(--color-grey-light-1);
-            text-align: center;
-            background-color: var(--color-secondary);
-            border-radius: 1rem;
-        }
 
         &-container {
             display: flex;
             justify-content: space-evenly;
             align-items: flex-start;
-            // gap: 1rem;
             margin-top:2rem;
-
-        }
-
-        &-day {
-            display: flex;
-            gap:1rem;
-            
-        }
-
-        &-akrobatyka {
-            
         }
 
         &-akrosmyk {
@@ -205,57 +183,58 @@
             padding: 2rem 0;
         }
 
-        // &-grid-5 {
-        //     display: grid;
-        //     grid-template-columns: 0.5fr repeat(4, 1fr);
-        //     justify-items: center;
-        //     align-items: center;
-        //     gap: 1rem;
-
-        //     &:not(:last-child) {
-        //         margin-bottom: 2rem;
-        //     }
-
-        // }
-
-        &-title {
-            
-        }
-
         &-hour {
             color: var(--color-grey-dark-2);
             font-size: 1.6rem;        }
 
         &-day {
+            display: flex;
+            gap:1rem;
+
             color: var(--color-grey-light-1);
             border-radius: 0.5rem;
             text-align: center;
         }
 
-        
-    }
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            &-item {
+                display: flex;
+                justify-content: center;
+                height: 3.4rem;
+                line-height: 3.4rem;
+                align-self: center;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                color: var(--color-grey-dark-2);
+                
+            }
+        }
+    } 
+
 }
 
 .active {
-    display: block;
-    
-    // background-color: var(--color-secondary);
-    
+    display: block;   
 }
 
-.grafik__class-akro.active{
+.coach__timetable-btn.active{
     scale: 1.1;
-    background-color: var(--color-secondary);
+    background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
     filter: blur(0px);
 }
 
-.grafik__coach-name.active{
-    border-radius: 0;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
+// .grafik__coach-name.active{
+//     border-radius: 0;
+//     border-top-left-radius: 1rem;
+//     border-top-right-radius: 1rem;
+// }
 
-.grafik__plan-flex-item span{
+.coach__schedule-flex-item span{
     font-size: 1.2rem;
     align-self: flex-start;
 }

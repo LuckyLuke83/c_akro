@@ -36,6 +36,9 @@ Grey dark 3: #999
     --color-secondary-light: #ec94d2;
     --color-secondary-dark: #821862;
     --color-third: #644fb0;
+    --color-third-dark: #3c2f6a;
+    --color-third-light: #a295d0;
+
     --color-fourth: #96f20f;
     --color-fifth: #ED7405;
     --color-white: #fff;
@@ -114,7 +117,8 @@ body {
         width: 35%;
         text-align: center;
         color: var(--color-grey-light-1);
-        background-color: var(--color-primary);
+        // background-color: var(--color-primary);
+        background-image: linear-gradient(to right bottom, var(--color-primary),var(--color-primary-dark));
         border-radius: 1rem;
         // opacity: 0.7;
     }

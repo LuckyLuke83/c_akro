@@ -55,6 +55,8 @@ Grey dark 3: #999
   --color-secondary-light: #ec94d2;
   --color-secondary-dark: #821862;
   --color-third: #644fb0;
+  --color-third-dark: #3c2f6a;
+  --color-third-light: #a295d0;
   --color-fourth: #96f20f;
   --color-fifth: #ED7405;
   --color-white: #fff;
@@ -115,7 +117,7 @@ body {
     width: 35%;
     text-align: center;
     color: var(--color-grey-light-1);
-    background-color: var(--color-primary);
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-dark));
     border-radius: 1rem; }
   .section__text {
     font-size: 1.8rem;
@@ -131,7 +133,8 @@ body {
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 10; }
   .nav__logo {
     height: 7rem; }
   .nav__container {
@@ -178,13 +181,13 @@ body {
       right: 2.5rem;
       color: var(--color-third); }
 
-.grafik__coach {
+.coach__container {
   display: flex;
   flex-direction: column;
   width: 100%;
   border-radius: 1rem; }
 
-.grafik__name {
+.coach__btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,11 +195,11 @@ body {
   border-radius: 1rem;
   padding: 1rem 2rem;
   color: var(--color-grey-light-1);
-  background-color: var(--color-third); }
-  .grafik__name:not(:last-child) {
+  background-image: linear-gradient(to right bottom, var(--color-third), var(--color-third-dark)); }
+  .coach__btn:not(:last-child) {
     margin-bottom: 1rem; }
 
-.grafik__timetable {
+.coach__timetable {
   display: none;
   width: 100%;
   z-index: 1;
@@ -204,12 +207,15 @@ body {
   background-color: var(--color-white);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem; }
-
-.grafik__class {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 4rem 0 3rem 0; }
-  .grafik__class-akro {
+  .coach__timetable-class {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem 0 3rem 0; }
+  .coach__timetable-active {
+    display: block;
+    transform: translateY(-2rem);
+    opacity: 1; }
+  .coach__timetable-btn {
     width: 40%;
     border: none;
     text-transform: uppercase;
@@ -219,19 +225,55 @@ body {
     border-radius: 1rem;
     transition: all 0.3s;
     filter: blur(0.8px); }
+    .coach__timetable-btn-active {
+      display: block;
+      scale: 1.1;
+      background-image: linear-gradient(to right bottom, var(--color-secondary), var(--color-secondary-dark));
+      filter: blur(0px); }
 
-.grafik__plan-content {
+.coach__schedule-header {
+  padding: 1rem;
+  color: var(--color-grey-light-1);
+  text-align: center;
+  background-image: linear-gradient(to right bottom, var(--color-secondary), var(--color-secondary-dark));
+  border-radius: 1rem; }
+
+.coach__schedule-content {
   display: none;
   padding: 2rem 0 3rem 0; }
-  .grafik__plan-content-active {
+  .coach__schedule-content-active {
     display: block; }
 
-.grafik__plan-flex {
+.coach__schedule-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 2rem; }
+
+.coach__schedule-akrosmyk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; }
+
+.coach__schedule-hour {
+  color: var(--color-grey-dark-2);
+  font-size: 1.6rem; }
+
+.coach__schedule-day {
+  display: flex;
+  gap: 1rem;
+  color: var(--color-grey-light-1);
+  border-radius: 0.5rem;
+  text-align: center; }
+
+.coach__schedule-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem; }
-  .grafik__plan-flex-item {
+  .coach__schedule-flex-item {
     display: flex;
     justify-content: center;
     height: 3.4rem;
@@ -241,53 +283,15 @@ body {
     letter-spacing: 1px;
     color: var(--color-grey-dark-2); }
 
-.grafik__plan-header {
-  padding: 1rem;
-  color: var(--color-grey-light-1);
-  text-align: center;
-  background-color: var(--color-secondary);
-  border-radius: 1rem; }
-
-.grafik__plan-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  margin-top: 2rem; }
-
-.grafik__plan-day {
-  display: flex;
-  gap: 1rem; }
-
-.grafik__plan-akrosmyk {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0; }
-
-.grafik__plan-hour {
-  color: var(--color-grey-dark-2);
-  font-size: 1.6rem; }
-
-.grafik__plan-day {
-  color: var(--color-grey-light-1);
-  border-radius: 0.5rem;
-  text-align: center; }
-
 .active {
   display: block; }
 
-.grafik__class-akro.active {
+.coach__timetable-btn.active {
   scale: 1.1;
-  background-color: var(--color-secondary);
+  background-image: linear-gradient(to right bottom, var(--color-secondary), var(--color-secondary-dark));
   filter: blur(0px); }
 
-.grafik__coach-name.active {
-  border-radius: 0;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; }
-
-.grafik__plan-flex-item span {
+.coach__schedule-flex-item span {
   font-size: 1.2rem;
   align-self: flex-start; }
 
