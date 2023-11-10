@@ -74,6 +74,9 @@
     }
 }
 
+.grafik {
+    
+}
 
 .coach {
 
@@ -93,7 +96,7 @@
         border-radius: 1rem;
         padding: 1rem 2rem;
         color: var(--color-grey-light-1);
-        background-image: linear-gradient(to right bottom, var(--color-third),var(--color-third-dark));
+        background-image: linear-gradient(to right bottom, var(--color-fourth-dark), var(--color-fourth));
         
         &:not(:last-child) {
             margin-bottom: 1rem;
@@ -102,13 +105,10 @@
 
     &__timetable {
         display: none;
-        // opacity: 0;
         width: 100%;
         
         z-index: 1;
         transform: translateY(-2rem);
-        // transform: translateY(-100%);
-        // transition: all 0.2s;
                 
         background-color: var(--color-white);
         border-bottom-left-radius: 1rem;
@@ -140,7 +140,7 @@
             &-active {
                 display: block; 
                 scale: 1.1;
-                background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
+                background-image: linear-gradient(to right bottom, var(--color-fourth-dark), var(--color-fourth));
                 filter: blur(0px);
             }
             
@@ -153,7 +153,6 @@
             padding: 1rem;
             color: var(--color-grey-light-1);
             text-align: center;
-            // background-color: var(--color-secondary);
             background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
             border-radius: 1rem;
         }
@@ -169,9 +168,9 @@
 
         &-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: flex-start;
-            margin-top:2rem;
+            margin-top:3rem;
         }
 
         &-akrosmyk {
@@ -179,11 +178,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             padding: 2rem 0;
         }
 
         &-hour {
+            
             color: var(--color-grey-dark-2);
             font-size: 1.6rem;        }
 
@@ -200,6 +199,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-self: flex-start;
             gap: 1rem;
 
             &-item {
@@ -222,11 +222,11 @@
     display: block;   
 }
 
-.coach__timetable-btn.active{
-    scale: 1.1;
-    background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
-    filter: blur(0px);
-}
+// .coach__timetable-btn.active{
+//     scale: 1.1;
+//     background-image: linear-gradient(to right bottom, var(--color-fourth), var(--color-fourth-dark));
+//     filter: blur(0px);
+// }
 
 // .grafik__coach-name.active{
 //     border-radius: 0;
@@ -240,7 +240,88 @@
 }
 
 
-.advance__level {
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    color: var(--color-grey-dark-1);
+    margin: 0 2rem;;
+    padding: 4rem 2rem;
+    border: solid 2px var(--color-primary-light);
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-light);
+
+    &__header {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__type {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &-header {
+            font-weight: 700;
+            text-transform: uppercase;
+            
+        }
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+
+        &-item {
+            padding-left: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+        }
+
+        &-price {
+            justify-self: center;
+        }
+        
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.8rem;
+
+        &-header {
+            font-weight: 700;
+        }
+        
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            list-style: none;
+
+            & li {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+
+.advance {
+
+    &__level {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -250,48 +331,58 @@
     font-size: 1.4rem;
     
 
-    &-item {
-        flex: 0 1 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        &-item {
+            flex: 0 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6rem;
 
-        padding: 0.5rem 0.3rem;
-        color: var(--color-grey-light-1);
-        text-align: center;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        border-radius: 0.5rem;
+            padding: 1rem 1rem;
+            color: var(--color-grey-light-1);
+            text-align: center;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-radius: 0.5rem;
+
+        // width: 25%;
+            border-radius: 0.5rem;
+            color: var(--color-grey-light-1)
+        }
+
+        &-1 {
+            background-color: var(--color-fifth);
+        }
+
+        &-2 {
+            background-color: var(--color-primary);
+        }
+
+        &-3 {
+            background-color: var(--color-secondary);
+        }
+
+        &-4 {
+            background-color: var(--color-fourth);
+        }
+
+        &-5 {
+            background-color: var(--color-third);
+        }
+
+        &-1,
+        &-2,
+        &-3,
+        &-4,
+        &-5 {
+            width: 11rem;
+            border-radius: 0.5rem;
+            color: var(--color-grey-light-1)
+        }
     }
 
-    &-1 {
-        background-color: var(--color-fifth);
+    &__description {
+        
     }
-
-    &-2 {
-        background-color: var(--color-primary);
-    }
-
-    &-3 {
-        background-color: var(--color-secondary);
-    }
-
-    &-4 {
-        background-color: var(--color-fourth);
-    }
-
-    &-5 {
-        background-color: var(--color-third);
-    }
-
-    &-1,
-    &-2,
-    &-3,
-    &-4,
-    &-5 {
-        width: 11rem;
-        border-radius: 0.5rem;
-        color: var(--color-grey-light-1)
-    }
-
 }
+
