@@ -42,7 +42,7 @@ Grey dark 3: #999
     --color-third-light: #a295d0;
 
     --color-fourth: #96f20f;
-    --color-fourth-dark: #5a9109;
+    --color-fourth-dark: #6baa0c;
     --color-fourth-light: #c0f76f;
 
     --color-fifth: #ED7405;
@@ -123,6 +123,7 @@ body {
     &__header {
         
         margin-bottom: 4rem;
+        transform: translateX(-2rem);
         text-transform: uppercase;
         padding-left: 2rem;
         color: var(--color-grey-dark-1);

@@ -120,9 +120,40 @@
         z-index: 2;
         border-radius: 1rem;
         padding: 1rem 2rem;
-        color: var(--color-grey-light-1);
-        background-image: linear-gradient(to right bottom, var(--color-fourth-dark), var(--color-fourth));
-        
+        // color: var(--color-grey-light-1);
+        // background-image: linear-gradient(to right bottom, var(--color-fourth-dark), var(--color-fourth));
+        border: solid 2px var(--color-third);
+        color: var(--color-third);
+
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        transition: all 0.3s;
+
+        &-empty {
+            display: none;
+        }
+
+        & p {
+            transition: all 0.3s; 
+        }
+
+        &:hover {
+            background-color: var(--color-third);
+            color: var(--color-background);
+            text-align: center;
+
+            & p {
+                transform:  scale(140%);
+                // transform: translateX(100%);
+            }
+
+            & .coach__btn-empty {
+                display:block;
+            }
+        }
+
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
@@ -387,34 +418,70 @@
             align-items: center;
             gap: 0.6rem;
 
-            padding: 1rem 1rem;
-            color: var(--color-grey-light-1);
+            padding: 0.75rem 0.75rem;
+            // color: var(--color-grey-light-1);
             text-align: center;
             font-size: 1.2rem;
             text-transform: uppercase;
             border-radius: 0.5rem;
 
-        // width: 25%;
+        
             border-radius: 0.5rem;
-            color: var(--color-grey-light-1)
+            
         }
 
         &-1 {
-            background-image: linear-gradient(to right bottom, var(--color-fifth),var(--color-fifth-light));
+            border: solid 2px var(--color-fifth);
+            color: var(--color-fifth);
+            
+            // background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
+                        // linear-gradient(to right, var(--color-fifth),var(--color-fifth-light)) border-box;
+            // opacity: 0.7;
+
+            // background-image: linear-gradient(to right bottom, var(--color-fifth),var(--color-fifth-light));
             // background-color: var(--color-fifth-light);
+
+            &-active {
+                background-color: var(--color-fifth);
+                color: var(--color-white);
+                
+            }
         }
 
         &-2 {
-            background-image: linear-gradient(to right bottom, var(--color-primary),var(--color-primary-light));
+            border: solid 2px var(--color-primary);
+            color: var(--color-primary);
+            // background-image: linear-gradient(to right bottom, var(--color-primary),var(--color-primary-light));
+            
+            &-active {
+                background-color: var(--color-primary);
+                color: var(--color-white);
+                
+            }
         }
 
         &-3 {
-            background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-light));
-            // background-color: var(--color-secondary);
+            border: solid 2px var(--color-secondary);
+            color: var(--color-secondary);
+            // background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-light));
+            
+            &-active {
+                background-color: var(--color-secondary);
+                color: var(--color-white);
+                
+            }
         }
 
         &-4 {
-            background-color: var(--color-fourth);
+            border: solid 2px var(--color-fourth-dark);
+            color: var(--color-fourth-dark);
+            // background-image: linear-gradient(to right bottom, var(--color-fourth),var(--color-fourth-light));
+            
+            &-active {
+                background-color: var(--color-fourth-dark);
+                color: var(--color-white);
+                
+            }
         }
 
         &-5 {
@@ -429,7 +496,12 @@
         &-5 {
             // width: 11rem;
             border-radius: 0.5rem;
-            color: var(--color-grey-light-1)
+            font-weight: 700;
+            transition: 0.3s all;
+            
+            &-active {
+                transform:  scale(110%);
+            }
         }
     }
 
@@ -444,10 +516,13 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            
         }
 
         &-active {
             display: block;
+            transition: all 0.3s;
+            
         }
 
         &-list {

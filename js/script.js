@@ -9,6 +9,7 @@ const arturClass = document.querySelector('.coach__timetable-class')
 const grafikContent = document.querySelectorAll('.coach__schedule-content');
 
 const advanceLevels = document.querySelector('.advance__level');
+
 const advanceTabs = document.querySelectorAll('.advance__level-item');
 const advanceItems = document.querySelectorAll('.advance__description-item');
 
@@ -32,6 +33,7 @@ team.addEventListener('click', function(e) {
     if (!clicked) return;
 
     advanceItems.forEach(t => t.classList.remove('advance__description-active'));
+    advanceTabs.forEach((t,i) => t.classList.remove(`advance__level-${i+1}-active`));
 
     document.getElementById(`${clicked.dataset.tab}`).classList.toggle('coach__timetable-active');
 })
@@ -52,30 +54,32 @@ arturClass.addEventListener('click', function(e) {
     .classList.add('coach__schedule-content-active');
 })
 
-
-
-
-
 advanceLevels.addEventListener('click', function(e) {
     const clicked = e.target.closest('.advance__level-item');
     const clickedDescription = document.querySelector(`.advance__description-${clicked.dataset.tab}`);
-    
+   
+    advanceTabs.forEach((t,i) => t.classList.remove(`advance__level-${i+1}-active`));
 
     // Guard clause
     if (!clicked) return;
 
+    // if (clicked.classList.contains(`advance__level-${clicked.dataset.tab}-active`)) {
+        
+    // }
+
     if (clickedDescription.classList.contains('advance__description-active')) {
         clickedDescription.classList.remove('advance__description-active');
+        clicked.classList.remove(`advance__level-${clicked.dataset.tab}-active`)
         return;
     }
 
+    clicked.classList.add(`advance__level-${clicked.dataset.tab}-active`);
     
     advanceItems.forEach(t => t.classList.remove('advance__description-active'));
 
     // clicked.classList.add('advance__description-active');
 
     document.querySelector(`.advance__description-${clicked.dataset.tab}`).classList.toggle('advance__description-active');
-
 
 })
 
