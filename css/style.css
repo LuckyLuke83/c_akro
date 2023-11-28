@@ -115,18 +115,19 @@ body {
   padding: 3rem 0;
   font-size: 1.8rem; }
   .section__header {
+    font-size: 1.6rem;
     margin-bottom: 4rem;
-    transform: translateX(-2rem);
     text-transform: uppercase;
-    padding-left: 2rem;
-    color: var(--color-grey-dark-1);
+    color: var(--color-white);
     font-weight: 700;
-    width: 40%;
-    background: linear-gradient(var(--color-background), var(--color-background)) padding-box, linear-gradient(to right, var(--color-grey-light-1), var(--color-grey-dark-2)) border-box;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border: 2px solid transparent;
-    border-left: 2px solid var(--color-background); }
+    width: 8.5rem;
+    height: 8.5rem;
+    background-color: var(--color-fourth);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(10deg); }
   .section__text {
     font-size: 1.8rem;
     margin-bottom: 1rem; }
@@ -512,6 +513,9 @@ body {
 
 .kontakt__payments i {
   margin-left: 1rem; }
+
+.kontakt__map iframe {
+  width: 100%; }
 
 .kontakt__item p {
   margin-left: 1rem; }

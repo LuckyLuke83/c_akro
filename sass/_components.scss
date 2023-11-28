@@ -594,7 +594,11 @@
     }
 
     &__map {
+        // width: 100%;
 
+        & iframe {
+            width:100%;
+        }
     }
 
     &__form {
