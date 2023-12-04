@@ -130,12 +130,13 @@ body {
         font-weight: 700;
         width: 8.5rem;
         height: 8.5rem;
-        background-color: var(--color-fourth);
+        // background-color: var(--color-fourth);
+        background-image: linear-gradient(to right bottom, var(--color-fourth),var(--color-fourth-dark));
         border-radius: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: rotate(10deg) ;
+        transform: rotate(10deg);
         
         // padding-left: 2rem;
         // color: var(--color-grey-dark-1);

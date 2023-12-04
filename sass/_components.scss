@@ -44,7 +44,7 @@
 
         &-li {
             transition: all 0.3s ease-in;
-            color: var(--color-third);
+            color: var(--color-fifth);
             padding: 0.5rem 3rem;
             border-radius: 2rem;
 
@@ -62,14 +62,14 @@
         align-items: center;
 
         &-menu {
-            color: var(--color-third);
+            color: var(--color-fifth);
         }
 
         &-close {
             position: absolute;
             top: 2.5rem;
             right: 2.5rem;
-            color: var(--color-third);
+            color: var(--color-fifth);
         }
     }
 }
@@ -631,3 +631,68 @@
     }
 }
 
+
+.news {
+
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "ferie dni-wolne"
+            "nocki dni-wolne";
+        gap: 2rem;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            color: var(--color-white);
+
+            & h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: 3fr 5fr;
+            grid-template-rows: auto;
+            gap: 1rem;
+
+            font-size: 1.6rem;
+        }
+
+        &-date {
+            font-weight: 700;
+            align-self: center;
+            justify-self: center;
+        }
+
+        &-name {
+            align-self: center; 
+        }
+    }
+
+    &__ferie {
+        grid-area: ferie;
+        // background-color: var(--color-primary);
+        background-image: linear-gradient(to right bottom, var(--color-primary),var(--color-primary-dark));
+    }
+
+    &__nocki {
+        grid-area: nocki;
+        // background-color: var(--color-secondary);
+        background-image: linear-gradient(to right bottom, var(--color-secondary),var(--color-secondary-dark));
+    }
+
+    &__dni-wolne {
+        grid-area: dni-wolne;
+        // background-color: var(--color-third);
+        background-image: linear-gradient(to right bottom, var(--color-third),var(--color-third-dark));
+    }
+}
